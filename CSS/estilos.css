@@ -1,10 +1,19 @@
+#fancy{
+margin: 1em auto;
+padding: 0. 3em;
+width: 30%; 
+border-radius: 0.3em;
+display: block;
+}
 .caja{
 	align-items: center;
-	border: solid;
+	border: solid white; 
 	box-shadow: 0 0 0.5em #FFF;
 	display: flex;
 	height: 400px;
 	justify-content: space-around;
+	margin: 0 auto;
+	width: 80%;
 }
 .caja div{
 	width: 25%;	
@@ -24,6 +33,52 @@
 .cajitas3{
 	background: salmon;
 	}
-	.cajitas3 img{
+.cajitas3 img{
 		max-width: 100%;
+	}
+	@media print {
+		#fancy, .cajitas1, .cajitas2{
+			display: none;
+		}
+		.caja .cajitas3{
+			width: 80%;
+		}
+	}
+	@keyframes daniela{
+		0%{
+			background: tomato;
+		}
+		20%{
+			background: gold;
+		}
+		60%{
+			background: lightpink;
+		}
+		80%{
+			transition: line(45deg);
+			transform: rotate(5deg);
+			transition-duration: 1s;
+			background: darkblue;
+		}
+		100%{
+			background: chocolate;
+		}
+	}
+
+	@media screen and (max-width: 550px){
+		.caja{
+		flex-direction:column-reverse;
+		height: auto;
+		width: 100%;}		
+		.caja div{
+			width: 100%;
+
+		}
+		#fancy{
+			width: 100%;
+		}
+		.caja .cajitas2{
+			animation: daniela infinite 5s alternate;
+		}
+
 	}

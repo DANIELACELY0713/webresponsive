@@ -55,9 +55,8 @@ display: block;
 			background: lightpink;
 		}
 		80%{
-			transition: line(45deg);
-			transform: rotate(5deg);
-			transition-duration: 1s;
+			border-radius: 70%;
+			transform: rotate(360deg);
 			background: darkblue;
 		}
 		100%{
@@ -78,7 +77,7 @@ display: block;
 			width: 100%;
 		}
 		.caja .cajitas2{
-			animation: daniela infinite 5s alternate;
+			animation: daniela infinite 60s alternate;
 		}
 
 	}
